@@ -1304,14 +1304,15 @@ a {
 }
 
 .planos .secao-titulo {
+    margin-left: clamp(0px, 1.5vw, 24px);
     font-size: clamp(30px, 3.8vw, 56px);
 }
 
 .planos-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: clamp(24px, 2.5vw, 42px);
-    max-width: 1128px;
+    gap: clamp(24px, 2.2vw, 34px);
+    max-width: 1245px;
     margin: 105px auto 0;
 }
 
@@ -1322,51 +1323,62 @@ a {
     flex-direction: column;
     min-height: 0;
     aspect-ratio: .84;
-    padding: clamp(38px, 3.5vw, 60px) clamp(22px, 2.2vw, 38px) clamp(56px, 5vw, 84px);
+    padding: clamp(36px, 3vw, 48px) clamp(22px, 1.9vw, 30px) clamp(48px, 4vw, 60px);
     border: 1px solid #383061;
     border-radius: 24px;
-    background: linear-gradient(135deg, #101a37 0%, #191a39 48%, #12182f 100%);
-    transition: border-color 200ms ease, background 200ms ease;
+    background: linear-gradient(130deg, #101a37 0%, #191a39 52%, #12182f 100%);
+    transition: transform 220ms ease, border-color 220ms ease, background 220ms ease;
+    transform-origin: center center;
 }
 
 .plano-card h3 {
     margin: 0 0 12px;
     color: #cf9d23;
-    font-size: clamp(30px, 2.5vw, 42px);
+    font-size: clamp(28px, 2.1vw, 32px);
     font-weight: 800;
 }
 
 .plano-card p {
     margin: 0 0 25px;
     color: #e7e4ee;
-    font-size: clamp(16px, 1.2vw, 20px);
+    font-size: clamp(15px, 1.05vw, 16px);
     line-height: 1.5;
 }
 
 .plano-card h4 {
     margin: 12px 0 8px;
-    font-size: clamp(18px, 1.45vw, 24px);
+    font-size: clamp(18px, 1.3vw, 20px);
     font-weight: 700;
 }
 
 .plano-agendar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     align-self: center;
     margin-top: auto;
-    padding: 18px 24px;
+    min-height: 54px;
+    padding: 12px 18px;
     border: 1px solid #343366;
-    border-radius: 8px;
+    border-radius: 9px;
     color: #ffffff;
-    background: #10152e;
+    background: transparent;
     font: inherit;
-    font-size: clamp(15px, 1.1vw, 18px);
+    font-size: clamp(14px, 1vw, 16px);
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    text-align: center;
+    transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease;
 }
 
 /* Todos os cartões ficam iguais; o destaque aparece apenas no hover ou foco. */
 
 .plano-card:hover,
 .plano-card:focus-within {
+    z-index: 2;
+    transform: scale(1.06);
     border-color: #cf9d23;
-    background: linear-gradient(135deg, #15162e 0%, #0e1b3b 26%, #0a2049 52%, #0d1c3d 76%, #15162e 100%);
+    background: linear-gradient(135deg, #0e142d 0%, #111b39 34%, #0d1934 68%, #0a1229 100%);
 }
 
 .plano-card:hover .plano-agendar,
@@ -1496,21 +1508,23 @@ a {
 
 .calcular-preco {
     min-height: 46px;
-    padding: 10px 12px;
-    border: 1px solid #343366;
-    border-radius: 8px;
-    color: #ffffff;
-    background: #10152e;
+    padding: 10px 18px;
+    border: 1px solid #cf9d23;
+    border-radius: 12px;
+    color: #0e0c23;
+    background: #cf9d23;
     font: inherit;
     font-size: 14px;
     font-weight: 700;
     cursor: pointer;
+    transition: border-color 180ms ease, color 180ms ease, background-color 180ms ease;
 }
 
-.calcular-preco:hover {
-    border-color: #cf9d23;
-    color: #0e0c23;
-    background: #cf9d23;
+.calcular-preco:hover,
+.calcular-preco:focus-visible {
+    border-color: #343366;
+    color: #ffffff;
+    background: #10152e;
 }
 
 .resultado-preco {
@@ -1908,6 +1922,11 @@ a {
         padding: 28px 18px;
     }
 
+    .plano-card:hover,
+    .plano-card:focus-within {
+        transform: scale(1.03);
+    }
+
     .calculadora-cabecalho {
         grid-template-columns: minmax(0, 1fr) minmax(190px, 260px);
     }
@@ -1933,6 +1952,11 @@ a {
     .plano-card {
         min-height: 390px;
         padding: 32px 28px;
+    }
+
+    .plano-card:hover,
+    .plano-card:focus-within {
+        transform: scale(1.02);
     }
 
     .calculadora-cabecalho {
@@ -2046,7 +2070,7 @@ a {
 
     .plano-card {
         aspect-ratio: auto;
-        min-height: 400px;
+        min-height: 390px;
     }
 
     .calculadora-planos {
