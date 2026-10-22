@@ -480,6 +480,7 @@ a {
         border: 1px solid var(--sobre-gold);
         border-radius: 22px;
     }
+
 }
 
 @media (max-width: 760px) {
