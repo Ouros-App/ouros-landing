@@ -73,7 +73,6 @@ a {
 }
 
 .sobre-nav a:hover,
-.sobre-nav .sobre-link-atual,
 .sobre-entrar:hover {
     color: var(--sobre-gold);
 }
@@ -81,6 +80,11 @@ a {
 .sobre-nav .sobre-link-atual {
     text-decoration: underline;
     text-underline-offset: 3px;
+}
+
+.sobre-nav .sobre-link-atual,
+.sobre-nav .sobre-link-atual:hover {
+    color: #fff;
 }
 
 .sobre-acoes {
