@@ -72,7 +72,7 @@ a {
     white-space: nowrap;
 }
 
-.sobre-nav a:hover,
+.sobre-nav a:hover:not(.sobre-link-atual),
 .sobre-entrar:hover {
     color: var(--sobre-gold);
 }
