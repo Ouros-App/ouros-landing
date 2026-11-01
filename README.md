@@ -10,7 +10,6 @@ A versão publicada está em [ouros-app.github.io/ouros-landing](https://ouros-a
 - `html/landing/sobre.html`: página Sobre.
 - `html/acesso/login.html`: tela de login.
 - `html/acesso/cadastro.html`: tela de cadastro.
-- `html/acesso/recuperar-senha.html`: tela de recuperação de senha.
 
 As páginas de acesso são visuais. Sem um backend, elas não autenticam usuários, não enviam formulários e não salvam dados.
 
@@ -42,7 +41,6 @@ html/
 ├── acesso/
 │   ├── cadastro.html
 │   ├── login.html
-│   └── recuperar-senha.html
 ├── assets/             # Imagens da landing page
 ├── img/                # Imagens das telas de acesso
 └── landing/
