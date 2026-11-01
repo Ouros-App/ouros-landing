@@ -51,7 +51,7 @@ a {
 }
 
 #header nav {
-    flex: 0 0 auto;
+    flex: 1 1 auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1503,7 +1503,7 @@ a {
     grid-template-columns: 1.5fr 1fr 1fr;
     align-items: center;
     column-gap: 30px;
-    row-gap: 36px;
+    row-gap: 22px;
     margin-top: 72px;
     margin-right: auto;
     margin-left: auto;
@@ -3151,7 +3151,6 @@ a {
     .ranking-calculo {
         margin-top: 50px;
         height: auto;
-        row-gap: 22px;
         padding: 28px 22px;
         border-radius: 20px;
     }
@@ -3332,7 +3331,7 @@ a {
     }
 
     .hero-content {
-        margin-top: calc(72px + 109.89px - clamp(80px, 8vw, 138px));
+        margin-top: calc(96px + 109.89px - clamp(80px, 8vw, 138px));
     }
 
     .hero {
