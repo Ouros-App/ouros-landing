@@ -3940,3 +3940,70 @@ a {
         padding: 4px;
     }
 }
+
+/* Mantém o ranking dentro da largura disponível em tablets. */
+@media (min-width: 761px) and (max-width: 1100px) {
+    .ranking-grid {
+        width: 94%;
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+        gap: clamp(20px, 3vw, 32px);
+    }
+
+    .ranking-apresentacao,
+    .ranking-beneficios,
+    .ranking-beneficio {
+        min-width: 0;
+    }
+
+    .ranking-titulo {
+        height: auto;
+        font-size: clamp(36px, 4.8vw, 52px);
+        line-height: 1.1;
+    }
+
+    .ranking-beneficio p {
+        min-width: 0;
+    }
+
+    .ranking-calculo {
+        height: auto;
+        min-height: 0;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        column-gap: clamp(18px, 3vw, 30px);
+        row-gap: clamp(20px, 3vw, 30px);
+        padding: clamp(20px, 3vw, 32px);
+    }
+
+    .calculo-cabecalho,
+    .calculo-explicacao {
+        grid-column: 1 / -1;
+        min-width: 0;
+    }
+
+    .calculo-explicacao {
+        width: 100%;
+        height: auto;
+    }
+
+    .calculo-formulas,
+    .formula--geral {
+        min-width: 0;
+    }
+
+    .formula p,
+    .formula--geral p {
+        max-width: 100%;
+        white-space: normal;
+    }
+
+    .plano-card {
+        aspect-ratio: auto;
+        min-height: 390px;
+    }
+
+    .plano-agendar {
+        position: static;
+        transform: none;
+        margin-top: auto;
+    }
+}
