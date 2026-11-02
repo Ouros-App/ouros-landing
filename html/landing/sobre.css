@@ -835,6 +835,11 @@ a {
         font-size: clamp(9px, 2.6vw, 12px);
     }
 
+    .sobre-titulo-secao::before,
+    .sobre-titulo-secao::after {
+        height: 2px;
+    }
+
     .sobre-foto-equipe {
         width: 82%;
         aspect-ratio: 2.05 / 1;
