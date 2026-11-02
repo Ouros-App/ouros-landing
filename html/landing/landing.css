@@ -3995,4 +3995,15 @@ a {
         max-width: 100%;
         white-space: normal;
     }
+
+    .plano-card {
+        aspect-ratio: auto;
+        min-height: 390px;
+    }
+
+    .plano-agendar {
+        position: static;
+        transform: none;
+        margin-top: auto;
+    }
 }
